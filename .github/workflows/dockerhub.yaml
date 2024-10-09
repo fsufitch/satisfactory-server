@@ -15,7 +15,7 @@ env:
 
 
 jobs:
-  build-publish:
+  update-description:
     runs-on: ubuntu-latest
     permissions:
       contents: read
