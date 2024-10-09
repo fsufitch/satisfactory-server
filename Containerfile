@@ -36,6 +36,7 @@ FROM steamcmd AS satisfactory
 ENV GAMEDIR=/opt/satisfactory
 
 USER root
+RUN apt-get update && apt-get install -y --no-install-recommends jq
 WORKDIR ${GAMEDIR}
 RUN chown -R steam:steam ${GAMEDIR}
 USER steam
@@ -45,3 +46,8 @@ RUN steamcmd \
         +login anonymous \
         +app_update 1690800 -beta public \
         +quit
+
+COPY get-satisfactory-version.sh /usr/local/bin/get-satisfactory-version
+
+ENTRYPOINT []
+CMD [ "./FactoryServer.sh" ]
