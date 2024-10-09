@@ -22,6 +22,15 @@ fi
 
 
 if [[ -z "$SKIP_TAGGING" ]]; then
+    if [[ "$BUILD_VERSION" != "latest" ]]; then
+        LATEST_TAG="${BUILD_REPOSITORY}:latest"
+        (set -ex && "$CTOOL" tag "$BUILD_TAG" "$LATEST_TAG")
+
+        if [[ -n "$ENABLE_PUSH" ]]; then
+            (set -ex && "$CTOOL" push "${LATEST_TAG}")
+        fi
+    fi
+
     SEMVER_VERSION=$("$CTOOL" run --rm --env VERSION_TYPE=semver "${BUILD_TAG}" get-satisfactory-version )
     SEMVER_TAG="${BUILD_REPOSITORY}:${SEMVER_VERSION}"
     (set -ex && "$CTOOL" tag "$BUILD_TAG" "$SEMVER_TAG")
