@@ -2,6 +2,17 @@
 
 A container setup for running a dedicated server for the [https://www.satisfactorygame.com/](Satisfactory) video game.
 
+## Usage
+
+The image is hosted on Dockerhub as `docker.io/fsufitch/satisfactory-server`:
+
+```sh
+docker pull docker.io/fsufitch/satisfactory-server
+```
+
+
+## Development
+
 To build the image, use the included `ci.sh` utility:
 
 ```sh
