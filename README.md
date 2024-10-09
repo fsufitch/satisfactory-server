@@ -36,7 +36,7 @@ As such, a sample command for running the game is:
 docker run \
     --interactive --tty --rm \
     -v "savedata:/home/steam/.config/Epic/FactoryGame" \
-    -v "$(pwd)/server-data:/home/steam/satisfactory/FactoryGame/Saved" \
+    -v "$(pwd)/server-data:/home/steam/satisfactory/FactoryGame/Saved:z" \
     -p 7777:7777/tcp \
     -p 7777:7777/udp \
     docker.io/fsufitch/satisfactory-server
