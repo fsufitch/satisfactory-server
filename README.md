@@ -10,6 +10,11 @@ The image is hosted on Dockerhub as `docker.io/fsufitch/satisfactory-server`:
 docker pull docker.io/fsufitch/satisfactory-server
 ```
 
+Using the `latest` tag may result in automatic (and unintended?) updates to your server. If you wish to pin your running version, tags are available based on the version of the game server itself, such as:
+
+* By semantic version `docker.io/fsufitch/satisfactory-server:5.3.2`
+* By build number: `docker.io/fsufitch/satisfactory-server:368883`
+
 This image can produce a Satisfactory game server as-is. However, due to the "ephemeral" design of containers. You should volume-mount some paths so you don't lose data on server restart:
 
 * `/home/steam/.config/Epic/FactoryGame` &mdash; This holds your game/world data. For performance, this is best held in an actual volume rather than your host's filesystem.
