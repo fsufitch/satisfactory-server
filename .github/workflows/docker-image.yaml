@@ -1,4 +1,4 @@
-name: Docker
+name: Container building/publishing
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -19,7 +19,7 @@ env:
 
 
 jobs:
-  build:
+  build-publish:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -55,4 +55,4 @@ jobs:
           BUILD_VERSION: ${{ github.event.head_commit.id }}
           ENABLE_PUSH: ${{ github.event_name != 'pull_request' && '1' || '' }}
         run:
-          ./build.sh
+          ./ci.sh
