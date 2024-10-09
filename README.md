@@ -1,9 +1,10 @@
 # Yet Another Satisfactory Dedicated Server
 
-A container setup for running a dedicated server for the [https://www.satisfactorygame.com/](Satisfactory) video game.
+A container-based setup for running a dedicated server for the [Satisfactory](https://www.satisfactorygame.com/) video game.
 
 * On Github: https://github.com/fsufitch/satisfactory-server
 * On Dockerhub: https://hub.docker.com/r/fsufitch/satisfactory-server
+* Build status: [![Container building/publishing](https://github.com/fsufitch/satisfactory-server/actions/workflows/docker-image.yaml/badge.svg?branch=main)](https://github.com/fsufitch/satisfactory-server/actions/workflows/docker-image.yaml)
 
 ## Usage
 
