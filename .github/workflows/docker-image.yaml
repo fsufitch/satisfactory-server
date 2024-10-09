@@ -26,7 +26,7 @@ jobs:
       packages: write
 
     environment: main
-     
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -57,10 +57,3 @@ jobs:
         run:
           ./ci.sh
 
-      - name: Update Docker Hub description
-        uses: peter-evans/dockerhub-description@v4
-        if: ${{github.event_name != 'pull_request' && vars.REGISTRY == 'docker.io'}}
-        with:
-          username: ${{ secrets.REGISTRY_USER }}
-          password: ${{ secrets.REGISTRY_PASSWORD }}
-          repository: ${{ env.IMAGENAME }}
