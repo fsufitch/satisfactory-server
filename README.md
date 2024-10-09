@@ -2,6 +2,9 @@
 
 A container setup for running a dedicated server for the [https://www.satisfactorygame.com/](Satisfactory) video game.
 
+* On Github: https://github.com/fsufitch/satisfactory-server
+* On Dockerhub: https://hub.docker.com/r/fsufitch/satisfactory-server
+
 ## Usage
 
 The image is hosted on Dockerhub as `docker.io/fsufitch/satisfactory-server`:
@@ -25,8 +28,6 @@ Some other considerations:
 * You should start the container with `--interactive` and `--tty`, as otherwise it may fail to respond to SIGTERM.
 * The game exposes ports `7777/tcp` and `7777/udp`. These must be exposed.
 * Since the server data is persisted across runtimes by mounting the locations above, you may want to run your server using `--rm`, to avoid littering with old containeres.
-
-
 
 As such, a sample command for running the game is:
 
