@@ -8,6 +8,7 @@ name: Update Dockerhub description
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch:  
 
 env:
   # github.repository as <account>/<repo>
