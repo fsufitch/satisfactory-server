@@ -33,7 +33,7 @@ CMD [ "+quit" ]
 # Main target with a Satisfactory server
 FROM steamcmd AS satisfactory
 
-ENV GAMEDIR=/opt/satisfactory
+ENV GAMEDIR=/home/steam/satisfactory
 
 USER root
 RUN apt-get update && apt-get install -y --no-install-recommends jq
